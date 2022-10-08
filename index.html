@@ -6,17 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="app.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="app">
-        <h1>Orar clasa a V-a "A"</h1>
-        <h2 class="day"></h2>
-        <div class="orar">
-            <ol id="orar_list"></ol>
+    <div class="app container">
+        <div class="row">
+            <h1>Orar clasa VI "A"</h1>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a id="luni" class="nav-link " aria-current="page" href="#">Ln</a>
+                </li>
+                <li class="nav-item">
+                    <a id="marti" class="nav-link" href="#">Ma</a>
+                </li>
+                <li class="nav-item">
+                    <a id="miercuri" class="nav-link" href="#">Mi</a>
+                </li>
+                <li class="nav-item">
+                    <a id="joi" class="nav-link " href="#">Joi</a>
+                </li>
+                <li class="nav-item">
+                    <a id="vineri" class="nav-link " href="#">Vi</a>
+                </li>
+            </ul>
+            <hr>
+            <!-- <h2 id="day"></h2> -->
+            <div class="orar">
+                <div class="col-12">
+                    <ol id="orar_list" class="list-group list-group-numbered">
+
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mt-3">
+                <p>Created by Alexandra Grosul</p>
+            </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
