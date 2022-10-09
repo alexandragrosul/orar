@@ -17,8 +17,18 @@
 
 <body>
     <div class="app container">
-        <div class="row">
-            <h1>Orar clasa VI "A"</h1>
+        <div class="row mt-2">
+            <div class="col-8">
+                <h1 class="mt-2">Orar scolar Waldorf</h1>
+            </div>
+            <div class="col-4">
+                <select id="clas-selection" class="form-select mb-2" aria-label="Selectati clasa">
+                    <option selected value="6A">a VI "A"</option>
+                    <option value="2A">a II "A"</option>
+
+                </select>
+            </div>
+
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <a id="luni" class="nav-link " aria-current="page" href="#">Ln</a>
@@ -36,6 +46,7 @@
                     <a id="vineri" class="nav-link " href="#">Vi</a>
                 </li>
             </ul>
+
             <hr>
             <!-- <h2 id="day"></h2> -->
             <div class="orar">

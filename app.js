@@ -130,6 +130,8 @@ const miercuriButton = document.getElementById('miercuri')
 const joiButton = document.getElementById('joi')
 const vineriButton = document.getElementById('vineri')
 
+const selectClas = document.getElementById('clas-selection')
+
 const isWeekends = () => {
     return currentDay === 0 || currentDay === 6 ? true : false
 }
@@ -231,6 +233,10 @@ vineriButton.addEventListener('click', () => {
 
     vineriButton.classList.add('active')
     buildOrar(5, false)
+})
+
+selectClas.addEventListener('change', function () {
+    localStorage.setItem('clasa', this.value)
 })
 
 buildOrar(currentDay, isWeekends())
