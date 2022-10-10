@@ -157,10 +157,11 @@ const buildOrar = (day, isWeekend) => {
     list.innerHTML = ''
     if (isWeekend) {
         luniButton.classList.add('active')
-        for (const predmet of orar[1]) {
+        for (let i = 0; i < orar[1].length; i++) {
+            // for (const predmet of orar[1]) {
             const newLi = document.createElement('li')
             newLi.classList.add('list-group-item')
-            newLi.innerText = predmet.name
+            newLi.innerText = orar[1][i].name
             list.appendChild(newLi)
 
         }
@@ -185,10 +186,12 @@ const buildOrar = (day, isWeekend) => {
 
 
         }
-        for (const predmet of orar[day]) {
+        for (let i = 0; i < orar[day].length; i++) {
+            // for (const predmet of orar[day]) {
             const newLi = document.createElement('li')
             newLi.classList.add('list-group-item')
-            newLi.innerText = predmet.name
+            newLi.innerHTML = `<div style="margin-left: 1rem">${orar[day][i].name} </div> <div style="margin-left: auto; font-size: 16px">${lessonsTime[i].start} - ${lessonsTime[i].end} </div>`
+            // newLi.innerText = `${orar[day][i].name} ${lessonsTime[i].start} - ${lessonsTime[i].end} `
             list.appendChild(newLi)
 
         }
