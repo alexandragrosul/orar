@@ -243,3 +243,14 @@ selectClas.addEventListener('change', function () {
 })
 
 buildOrar(currentDay, isWeekends())
+
+const today = new Date()
+const autumnHolidays = new Date(2022, 9, 26)
+console.log({
+    autumnHolidays
+})
+console.log({
+    today
+})
+
+console.log(Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24)))
