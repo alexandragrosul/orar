@@ -252,5 +252,5 @@ console.log({
 console.log({
     today
 })
-
-console.log(Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24)))
+const daysToVacation = document.querySelector('#daysToVacation')
+daysToVacation.innerText = Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24))

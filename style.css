@@ -1,6 +1,7 @@
 body {
     font-size: 20px;
     font-family: 'Comfortaa', cursive;
+    background-color: #E8F9FD;
 }
 
 h1 {
@@ -22,4 +23,20 @@ h1 {
 
 .list-group-item{
     display:flex;
+}
+
+.color-primary {
+    color: #A66CFF;
+}
+
+.color-secondare {
+    color: #9C9EFE;
+}
+
+.color-secondare-light {
+    color: #AFB4FF;
+}
+
+.color-bg {
+    color: #B1E1FF;
 }

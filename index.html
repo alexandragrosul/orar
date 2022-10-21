@@ -12,22 +12,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Orar scolar Waldorf</title>
 </head>
 
 <body>
-    <div class="app container">
-        <div class="row mt-2">
-            <div class="col-8">
-                <h1 class="mt-2">Orar scolar Waldorf</h1>
-            </div>
-            <div class="col-4">
+    <nav class="navbar navbar-expand-lg bg-light" style="background-color: #79DAE8!important">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Orar Waldorf</a>
+            <div>
                 <select id="clas-selection" class="form-select mb-2" aria-label="Selectati clasa">
                     <option selected value="6A">a VI "A"</option>
                     <option value="2A">a II "A"</option>
 
                 </select>
             </div>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="app container">
+        <div class="row mt-2">
+
 
             <ul class="nav nav-tabs">
                 <li class="nav-item">
@@ -58,10 +97,77 @@
 
             </div>
         </div>
+        <div class="row w-100">
+
+            <div class="col-12 mt-3">
+                <h5>Pana la vacanta a ramas: <span id="daysToVacation"></span> zile</h5>
+                <!-- <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Vacantele anului scolar
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <table class="publicholidays phgtable ">
+                                    <thead>
+                                        <tr>
+                                            <th>Calendar scolara</th>
+                                            <th>Start</th>
+                                            <th>Sfârșit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="even ">
+                                            <td><span class="summary">Prima zi de scolara</span></td>
+                                            <td>1 septembrie 2022<br>(joi)</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="odd ">
+                                            <td><span class="summary">Vacanța de toamnă</span></td>
+                                            <td>26 octombrie 2022<br>(miercuri)</td>
+                                            <td>30 octombrie 2022<br>(duminică)</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><span class="summary">Vvacanţa de iarnă</span></td>
+                                            <td>24 decembrie 2022<br>(sâmbătă)</td>
+                                            <td>8 ianuarie 2023<br>(duminică)</td>
+                                        </tr>
+                                        <tr class="odd ">
+                                            <td><span class="summary">Vacanţa de primăvară</span></td>
+                                            <td>8 martie 2023<br>(miercuri)</td>
+                                            <td>12 martie 2023<br>(duminică)</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><span class="summary">Vacanţa de Paşti</span></td>
+                                            <td>15 aprilie 2023<br>(sâmbătă)</td>
+                                            <td>24 aprilie 2023<br>(luni)</td>
+                                        </tr>
+                                        <tr class="odd ">
+                                            <td><span class="summary">Vacanţa de vară</span></td>
+                                            <td>1 iunie 2023<br>(joi)</td>
+                                            <td>31 august 2023<br>(joi)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="alert alert-warning" role="alert">
+                    Iarmarocul este pe data de 22 octombrie sambata
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col mt-3">
-                <p>Created by <a href="mailto:grosulalexandra@gmail.com?subject=orar-scolar">Alexandra Grosul</a></p>
+                <p style="font-size: 1rem;">Created by <a
+                        href="mailto:grosulalexandra@gmail.com?subject=orar-scolar">Alexandra Grosul</a></p>
             </div>
         </div>
     </div>
