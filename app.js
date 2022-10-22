@@ -1,93 +1,117 @@
-const orar = {
-    1: [{
-            name: "Ora de baza",
-        },
-        {
-            name: "Ora de baza",
-        },
-        {
-            name: "Exercitii",
-        },
-        {
-            name: "L.eng./l.germ",
-        },
-        {
-            name: "L.germ./l.eng",
-        },
-        {
-            name: "Ins.muz/eur.",
-        },
-        {
-            name: "Eur./ins.muz.",
-        },
-    ],
-    2: [{
-            name: "Ora de baza",
-        },
-        {
-            name: "Ora de baza",
-        },
-        {
-            name: "Exercitii",
-        },
-        {
-            name: "Dezv. pers.",
-        },
-        {
-            name: "Geografia",
-        },
-    ],
-    3: [{
-            name: "Ora de baza",
-        },
-        {
-            name: "Ora de baza",
-        },
-        {
-            name: "Exercitii",
-        },
-        {
-            name: "Ed. plastic.",
-        },
-        {
-            name: "L. romana",
-        },
-        {
-            name: "Ed. muz.",
-        },
-    ],
-    4: [{
-            name: "Ora de baza",
-        },
-        {
-            name: "Ora de baza",
-        },
-        {
-            name: "Exercitii",
-        },
-        {
-            name: "Ed. tehno.",
-        },
-        {
-            name: "Ed. tehno.",
-        },
-    ],
-    5: [{
-            name: "Ora de baza",
-        },
-        {
-            name: "Ora de baza",
-        },
-        {
-            name: "Exercitii",
-        },
-        {
-            name: "Ed. fizica",
-        }, {
-            name: "Ed. fizica",
-        },
-    ],
-};
+// const orar = {
+//     1: [{
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Exercitii",
+//         },
+//         {
+//             name: "L.eng./l.germ",
+//         },
+//         {
+//             name: "L.germ./l.eng",
+//         },
+//         {
+//             name: "Ins.muz/eur.",
+//         },
+//         {
+//             name: "Eur./ins.muz.",
+//         },
+//     ],
+//     2: [{
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Exercitii",
+//         },
+//         {
+//             name: "Dezv. pers.",
+//         },
+//         {
+//             name: "Geografia",
+//         },
+//     ],
+//     3: [{
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Exercitii",
+//         },
+//         {
+//             name: "Ed. plastic.",
+//         },
+//         {
+//             name: "L. romana",
+//         },
+//         {
+//             name: "Ed. muz.",
+//         },
+//     ],
+//     4: [{
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Exercitii",
+//         },
+//         {
+//             name: "Ed. tehno.",
+//         },
+//         {
+//             name: "Ed. tehno.",
+//         },
+//     ],
+//     5: [{
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Ora de baza",
+//         },
+//         {
+//             name: "Exercitii",
+//         },
+//         {
+//             name: "Ed. fizica",
+//         }, {
+//             name: "Ed. fizica",
+//         },
+//     ],
+// };
+const currentDate = new Date();
+const currentDay = currentDate.getDay();
+
+const list = document.getElementById('orar_list')
+const dayToDisplay = document.getElementById('day')
+const luniButton = document.getElementById('luni')
+const martiButton = document.getElementById('marti')
+const miercuriButton = document.getElementById('miercuri')
+const joiButton = document.getElementById('joi')
+const vineriButton = document.getElementById('vineri')
+
+const selectClas = document.getElementById('clas-selection')
+
+let orar = null
+const classSelected = localStorage.getItem('clasa') ? localStorage.getItem('clasa') : "VI A"
+
+fetch("./waldorf.json")
+    .then(response => {
+        return response.json()
+    })
+    .then(data => orar = data[classSelected])
+    .then(() => {
+        buildOrar(currentDay, isWeekends())
+    })
 
 const lessonsTime = [{
         start: '8:30',
@@ -119,20 +143,11 @@ const lessonsTime = [{
     }
 ]
 
-const currentDate = new Date();
-const currentDay = currentDate.getDay();
 
-const list = document.getElementById('orar_list')
-const dayToDisplay = document.getElementById('day')
-const luniButton = document.getElementById('luni')
-const martiButton = document.getElementById('marti')
-const miercuriButton = document.getElementById('miercuri')
-const joiButton = document.getElementById('joi')
-const vineriButton = document.getElementById('vineri')
 
-const selectClas = document.getElementById('clas-selection')
 
-const isWeekends = () => {
+
+function isWeekends() {
     return currentDay === 0 || currentDay === 6 ? true : false
 }
 
@@ -153,7 +168,7 @@ const getDay = (day) => {
     }
 }
 
-const buildOrar = (day, isWeekend) => {
+function buildOrar(day, isWeekend) {
     list.innerHTML = ''
     if (isWeekend) {
         luniButton.classList.add('active')
@@ -240,9 +255,10 @@ vineriButton.addEventListener('click', () => {
 
 selectClas.addEventListener('change', function () {
     localStorage.setItem('clasa', this.value)
+    // buildOrar(currentDay, isWeekends())
 })
 
-buildOrar(currentDay, isWeekends())
+// buildOrar(currentDay, isWeekends())
 
 const today = new Date()
 const autumnHolidays = new Date(2022, 9, 26)
