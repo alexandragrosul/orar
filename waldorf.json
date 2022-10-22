@@ -1,0 +1,182 @@
+{
+    "II A" : {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "L.eng./l.franceza"
+            },
+            {
+                "name": "L.germ./l.franceza"
+            },
+            {
+                "name": "Ins.muz/eur."
+            },
+            {
+                "name": "Eur./ins.muz."
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Dezv. pers."
+            },
+            {
+                "name": "Geografia"
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. plastic."
+            },
+            {
+                "name": "L. romana"
+            },
+            {
+                "name": "Ed. muz."
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. tehno."
+            },
+            {
+                "name": "Ed. tehno."
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. fizica"
+            }, {
+                "name": "Ed. fizica"
+            }
+        ]
+    },
+    "VI A" : {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "L.eng./l.germ"
+            },
+            {
+                "name": "L.germ./l.eng"
+            },
+            {
+                "name": "Ins.muz/eur."
+            },
+            {
+                "name": "Eur./ins.muz."
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Dezv. pers."
+            },
+            {
+                "name": "Geografia"
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. plastic."
+            },
+            {
+                "name": "L. romana"
+            },
+            {
+                "name": "Ed. muz."
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. tehno."
+            },
+            {
+                "name": "Ed. tehno."
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. fizica"
+            }, {
+                "name": "Ed. fizica"
+            }
+        ]
+    }
+}
