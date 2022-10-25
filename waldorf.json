@@ -1,5 +1,5 @@
 {
-    "II A" : {
+    "II A": {
         "1": [{
                 "name": "Ora de baza"
             },
@@ -7,35 +7,28 @@
                 "name": "Ora de baza"
             },
             {
-                "name": "Exercitii"
+                "name": "Ora de baza"
             },
             {
-                "name": "L.eng./l.franceza"
+                "name": "L.franceza/Ed.tehno."
             },
             {
-                "name": "L.germ./l.franceza"
-            },
-            {
-                "name": "Ins.muz/eur."
-            },
-            {
-                "name": "Eur./ins.muz."
+                "name": "Ed.tehno./l.franceza"
             }
+
         ],
         "2": [{
-                "name": "Ora de baza"
+                "name": "L. engleza/Euritmie"
+            }, {
+                "name": "L. engleza/Euritmie"
             },
             {
                 "name": "Ora de baza"
-            },
-            {
-                "name": "Exercitii"
+            }, {
+                "name": "Ora de baza"
             },
             {
                 "name": "Dezv. pers."
-            },
-            {
-                "name": "Geografia"
             }
         ],
         "3": [{
@@ -45,16 +38,13 @@
                 "name": "Ora de baza"
             },
             {
-                "name": "Exercitii"
+                "name": "L. engleza/Ed.tehno"
             },
             {
-                "name": "Ed. plastic."
+                "name": "Ed.tehno/L. engleza"
             },
             {
-                "name": "L. romana"
-            },
-            {
-                "name": "Ed. muz."
+                "name": "Desenul formelor"
             }
         ],
         "4": [{
@@ -64,13 +54,13 @@
                 "name": "Ora de baza"
             },
             {
-                "name": "Exercitii"
+                "name": "Ed. moral. spirit"
             },
             {
-                "name": "Ed. tehno."
+                "name": "L.franceza/ Ins. muzical"
             },
             {
-                "name": "Ed. tehno."
+                "name": "Ins. muzical/L.franceza"
             }
         ],
         "5": [{
@@ -80,16 +70,16 @@
                 "name": "Ora de baza"
             },
             {
-                "name": "Exercitii"
+                "name": "Jocuri mobile"
             },
             {
-                "name": "Ed. fizica"
+                "name": "Ed. plastica"
             }, {
-                "name": "Ed. fizica"
+                "name": "Ed. muzicala"
             }
         ]
     },
-    "VI A" : {
+    "VI A": {
         "1": [{
                 "name": "Ora de baza"
             },

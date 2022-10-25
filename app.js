@@ -1,93 +1,3 @@
-// const orar = {
-//     1: [{
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Exercitii",
-//         },
-//         {
-//             name: "L.eng./l.germ",
-//         },
-//         {
-//             name: "L.germ./l.eng",
-//         },
-//         {
-//             name: "Ins.muz/eur.",
-//         },
-//         {
-//             name: "Eur./ins.muz.",
-//         },
-//     ],
-//     2: [{
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Exercitii",
-//         },
-//         {
-//             name: "Dezv. pers.",
-//         },
-//         {
-//             name: "Geografia",
-//         },
-//     ],
-//     3: [{
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Exercitii",
-//         },
-//         {
-//             name: "Ed. plastic.",
-//         },
-//         {
-//             name: "L. romana",
-//         },
-//         {
-//             name: "Ed. muz.",
-//         },
-//     ],
-//     4: [{
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Exercitii",
-//         },
-//         {
-//             name: "Ed. tehno.",
-//         },
-//         {
-//             name: "Ed. tehno.",
-//         },
-//     ],
-//     5: [{
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Ora de baza",
-//         },
-//         {
-//             name: "Exercitii",
-//         },
-//         {
-//             name: "Ed. fizica",
-//         }, {
-//             name: "Ed. fizica",
-//         },
-//     ],
-// };
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
@@ -100,18 +10,32 @@ const joiButton = document.getElementById('joi')
 const vineriButton = document.getElementById('vineri')
 
 const selectClas = document.getElementById('clas-selection')
-
+console.log(selectClas.options)
 let orar = null
 const classSelected = localStorage.getItem('clasa') ? localStorage.getItem('clasa') : "VI A"
 
-fetch("./waldorf.json")
-    .then(response => {
-        return response.json()
-    })
-    .then(data => orar = data[classSelected])
-    .then(() => {
-        buildOrar(currentDay, isWeekends())
-    })
+function setSelectedClass() {
+    for (let option of selectClas.options) {
+        if (option.value === classSelected) {
+            selectClas.options[option.index].selected = true;
+        }
+    }
+}
+
+setSelectedClass()
+
+function getOrar(clasa) {
+    fetch("./waldorf.json")
+        .then(response => {
+            return response.json()
+        })
+        .then(data => orar = data[clasa])
+        .then(() => {
+            buildOrar(currentDay, isWeekends())
+        })
+}
+
+getOrar(classSelected)
 
 const lessonsTime = [{
         start: '8:30',
@@ -255,13 +179,14 @@ vineriButton.addEventListener('click', () => {
 
 selectClas.addEventListener('change', function () {
     localStorage.setItem('clasa', this.value)
-    // buildOrar(currentDay, isWeekends())
+    getOrar(this.value)
+    buildOrar(currentDay, isWeekends())
 })
 
 // buildOrar(currentDay, isWeekends())
 
 const today = new Date()
-const autumnHolidays = new Date(2022, 9, 26)
+const autumnHolidays = new Date(2022, 9, 31)
 console.log({
     autumnHolidays
 })
