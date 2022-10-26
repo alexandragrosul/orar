@@ -1,0 +1,24 @@
+{
+  "name": "orarscolar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandragrosul/orar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandragrosul/orar/issues"
+  },
+  "homepage": "https://github.com/alexandragrosul/orar#readme",
+  "devDependencies": {
+    "jsdoc": "^3.6.11"
+  }
+}

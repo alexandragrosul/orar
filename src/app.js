@@ -1,3 +1,8 @@
+import {
+    getDay,
+    isWeekends
+} from "./modules/functions.js";
+
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
@@ -10,7 +15,6 @@ const joiButton = document.getElementById('joi')
 const vineriButton = document.getElementById('vineri')
 
 const selectClas = document.getElementById('clas-selection')
-console.log(selectClas.options)
 let orar = null
 const classSelected = localStorage.getItem('clasa') ? localStorage.getItem('clasa') : "VI A"
 
@@ -31,7 +35,7 @@ function getOrar(clasa) {
         })
         .then(data => orar = data[clasa])
         .then(() => {
-            buildOrar(currentDay, isWeekends())
+            buildOrar(currentDay, isWeekends(currentDay))
         })
 }
 
@@ -66,31 +70,6 @@ const lessonsTime = [{
         end: '15:10'
     }
 ]
-
-
-
-
-
-function isWeekends() {
-    return currentDay === 0 || currentDay === 6 ? true : false
-}
-
-const getDay = (day) => {
-    switch (day) {
-        case 1:
-            return 'Luni'
-        case 2:
-            return 'Marti'
-        case 3:
-            return 'Miercuri'
-        case 4:
-            return 'Joi'
-        case 5:
-            return 'Vineri'
-        default:
-            return "Weekenduri"
-    }
-}
 
 function buildOrar(day, isWeekend) {
     list.innerHTML = ''
@@ -180,18 +159,11 @@ vineriButton.addEventListener('click', () => {
 selectClas.addEventListener('change', function () {
     localStorage.setItem('clasa', this.value)
     getOrar(this.value)
-    buildOrar(currentDay, isWeekends())
+    buildOrar(currentDay, isWeekends(currentDay))
 })
 
-// buildOrar(currentDay, isWeekends())
 
 const today = new Date()
 const autumnHolidays = new Date(2022, 9, 31)
-console.log({
-    autumnHolidays
-})
-console.log({
-    today
-})
 const daysToVacation = document.querySelector('#daysToVacation')
 daysToVacation.innerText = Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24))
