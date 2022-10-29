@@ -4,6 +4,29 @@ body {
     background-color: #E8F9FD;
 }
 
+
+.top-header {
+    align-items: flex-start!important;
+}
+/* nav { 
+    background-color: #79DAE8
+} */
+
+body.dark-theme {
+    color: aliceblue ;
+    background-color: #495057 ;
+  }
+
+  body.dark-theme a {
+    color: #adb5bd;
+  }
+
+
+
+nav.dark-theme {
+    background-color: red!important;
+}
+
 h1 {
     font-size: 22px;
     font-weight: 500;

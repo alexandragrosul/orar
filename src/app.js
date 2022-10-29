@@ -167,3 +167,34 @@ const today = new Date()
 const autumnHolidays = new Date(2022, 9, 31)
 const daysToVacation = document.querySelector('#daysToVacation')
 daysToVacation.innerText = Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24))
+
+const themeSwitch = document.getElementById("themeSwitch");
+// const themeIconPath = themeSwitch.src.split('/')
+// const themeIconImg = themeIconPath[themeIconPath.length - 1]
+let isDarkTheme = false
+
+if (localStorage.getItem('isDark') === null) {
+    localStorage.setItem('isDark', 'false')
+} else {
+    isDarkTheme = JSON.parse(localStorage.getItem('isDark'))
+}
+
+if (isDarkTheme) {
+    themeSwitch.src = "images/sun.png"
+    document.body.classList.toggle('dark-theme');
+}
+
+themeSwitch.addEventListener("click", function () {
+    isDarkTheme = !isDarkTheme
+    localStorage.setItem('isDark', isDarkTheme ? 'true' : 'false')
+    // isDarkTheme ? themeSwitch.src = "images/sun.png" : themeSwitch.src = "images/moon.png"
+    document.body.classList.toggle('dark-theme');
+    themeSwitch.innerText = isDarkTheme ? 'Light' : 'Dark'
+    themeSwitch.classList.remove('btn-dark', 'btn-light')
+    if (isDarkTheme) {
+        themeSwitch.classList.add('btn-light')
+    } else {
+        themeSwitch.classList.add('btn-dark')
+
+    }
+})
