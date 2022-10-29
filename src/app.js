@@ -6,6 +6,12 @@ import {
     lessonsTime
 } from "./modules/constants.js"
 
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+}
+
+
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
 
@@ -169,5 +175,7 @@ themeSwitch.addEventListener("click", function () {
 
     }
 })
+
+
 
 // setInterval(() => console.log(getCurrentTime()), 60000)
