@@ -22,3 +22,10 @@ export const getDay = (day) => {
 export function isWeekends(day) {
     return day === 0 || day === 6 ? true : false
 }
+
+export const getCurrentTime = () => {
+    const today = new Date()
+    const hours = today.getHours()
+    const minutes = today.getMinutes()
+    return `${hours}:${minutes}`
+}

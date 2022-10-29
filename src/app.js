@@ -1,7 +1,10 @@
 import {
-    getDay,
+    getCurrentTime,
     isWeekends
 } from "./modules/functions.js";
+import {
+    lessonsTime
+} from "./modules/constants.js"
 
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
@@ -41,49 +44,17 @@ function getOrar(clasa) {
 
 getOrar(classSelected)
 
-const lessonsTime = [{
-        start: '8:30',
-        end: '09:15'
-    },
-    {
-        start: '9:30',
-        end: '10:20'
-    },
-    {
-        start: '10:35',
-        end: '11:20'
-    },
-    {
-        start: '11:35',
-        end: '12:20'
-    },
-    {
-        start: '12:30',
-        end: '13:15'
-    },
-    {
-        start: '13:30',
-        end: '14:15'
-    },
-    {
-        start: '14:25',
-        end: '15:10'
-    }
-]
-
 function buildOrar(day, isWeekend) {
     list.innerHTML = ''
     if (isWeekend) {
         luniButton.classList.add('active')
         for (let i = 0; i < orar[1].length; i++) {
-            // for (const predmet of orar[1]) {
             const newLi = document.createElement('li')
             newLi.classList.add('list-group-item')
-            newLi.innerText = orar[1][i].name
+            newLi.innerHTML = `<div style="margin-left: 1rem">${orar[1][i].name} </div> <div style="margin-left: auto; font-size: 16px">${lessonsTime[i].start} - ${lessonsTime[i].end} </div>`
             list.appendChild(newLi)
 
         }
-        // dayToDisplay.innerText = `Orar pentru Luni`
     } else {
         switch (day) {
             case 1:
@@ -105,15 +76,11 @@ function buildOrar(day, isWeekend) {
 
         }
         for (let i = 0; i < orar[day].length; i++) {
-            // for (const predmet of orar[day]) {
             const newLi = document.createElement('li')
             newLi.classList.add('list-group-item')
             newLi.innerHTML = `<div style="margin-left: 1rem">${orar[day][i].name} </div> <div style="margin-left: auto; font-size: 16px">${lessonsTime[i].start} - ${lessonsTime[i].end} </div>`
-            // newLi.innerText = `${orar[day][i].name} ${lessonsTime[i].start} - ${lessonsTime[i].end} `
             list.appendChild(newLi)
-
         }
-        // dayToDisplay.innerText = `Orar pentru ${getDay(currentDay+1)}`
     }
 }
 
@@ -164,13 +131,11 @@ selectClas.addEventListener('change', function () {
 
 
 const today = new Date()
-const autumnHolidays = new Date(2022, 9, 31)
+const autumnHolidays = new Date(2022, 11, 24)
 const daysToVacation = document.querySelector('#daysToVacation')
 daysToVacation.innerText = Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24))
 
 const themeSwitch = document.getElementById("themeSwitch");
-// const themeIconPath = themeSwitch.src.split('/')
-// const themeIconImg = themeIconPath[themeIconPath.length - 1]
 let isDarkTheme = false
 
 if (localStorage.getItem('isDark') === null) {
@@ -180,14 +145,20 @@ if (localStorage.getItem('isDark') === null) {
 }
 
 if (isDarkTheme) {
-    themeSwitch.src = "images/sun.png"
     document.body.classList.toggle('dark-theme');
+    themeSwitch.innerText = isDarkTheme ? 'Light' : 'Dark'
+    themeSwitch.classList.remove('btn-dark', 'btn-light')
+    if (isDarkTheme) {
+        themeSwitch.classList.add('btn-light')
+    } else {
+        themeSwitch.classList.add('btn-dark')
+
+    }
 }
 
 themeSwitch.addEventListener("click", function () {
     isDarkTheme = !isDarkTheme
     localStorage.setItem('isDark', isDarkTheme ? 'true' : 'false')
-    // isDarkTheme ? themeSwitch.src = "images/sun.png" : themeSwitch.src = "images/moon.png"
     document.body.classList.toggle('dark-theme');
     themeSwitch.innerText = isDarkTheme ? 'Light' : 'Dark'
     themeSwitch.classList.remove('btn-dark', 'btn-light')
@@ -198,3 +169,5 @@ themeSwitch.addEventListener("click", function () {
 
     }
 })
+
+// setInterval(() => console.log(getCurrentTime()), 60000)
