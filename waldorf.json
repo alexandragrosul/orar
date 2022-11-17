@@ -530,5 +530,320 @@
                 "name": "L.eng./Euritmie"
             }
         ]
+    },
+    "IV A": {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Euritmie/Ed.tehno."
+            },
+            {
+                "name": "Ed.tehno./Euritmie"
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            }, {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            }, {
+                "name": "L. eng./Ed.tehno"
+            },
+            {
+                "name": "Ed.tehno./l.eng"
+            },
+            {
+                "name": "Ed. muz."
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            }, 
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Dezv. pers."
+            },
+            {
+                "name": "Ed. moral. spirit"
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ins.muz/L. germ"
+            },
+            {
+                "name": "L.germ/Ins.muz"
+            },
+            {
+                "name": "Ed. plastic."
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "L.eng./l.germ"
+            }, {
+                "name": "L.germ./l.eng"
+            }
+        ]
+    },
+    "IV B": {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Dezv. pers."
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            }, {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. plastic."
+            }, {
+                "name": "L. germ/Euritmie"
+            },
+            {
+                "name": "Euritmie/L.germ"
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            }, 
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. moral. spirit"
+            },
+            {
+                "name": "L.germ./l.eng"
+            },
+            {
+                "name": "L.eng./l.germ"
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            },
+            {
+                "name": "L. eng./Ed.tehno"
+            },
+            {
+                "name": "Ed.tehno./l.eng"
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "ins.muz/Ed.tehno"
+            },
+            {
+                "name": "Ed.tehno./ins.muz"
+            }
+        ]
+    },
+    "V A": {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "L.germ./l.eng"
+            },
+            {
+                "name": "L.eng./l.germ"
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            }, {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            }, {
+                "name": "Ed. muz."
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            }, 
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. tehno."
+            },
+            {
+                "name": "Ed. tehno."
+            },
+            {
+                "name": "L.eng/Ins.muz"
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Dezv. pers."
+            },
+            {
+                "name": "Euritmie/l. germ"
+            },
+            {
+                "name": "L. germ/Euritmie"
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            },
+            {
+                "name": "Ed. plastic"
+            },
+            {
+                "name": "Ed. societate"
+            },
+            {
+                "name": "L..eng/ins.muz"
+            }
+        ]
+    },
+    "V B": {
+        "1": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ed. tehno."
+            },
+            {
+                "name": "Ed. tehno."
+            }
+        ],
+        "2": [{
+                "name": "Ora de baza"
+            }, {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. muz."
+            }, {
+                "name": "L.germ./Euritm."
+            },
+            {
+                "name": "Eduritm./L. germ"
+            }, {
+                "name": "L.eng/Ins.muz"
+            }
+        ],
+        "3": [{
+                "name": "Ora de baza"
+            }, 
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            },
+            {
+                "name": "L.eng./l.germ"
+            },
+            {
+                "name": "L.germ./l.eng"
+            }
+        ],
+        "4": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. fizica"
+            },
+            {
+                "name": "Dezv. pers."
+            },
+            {
+                "name": "Exercitii"
+            },
+            {
+                "name": "Ins.muz/L. engl"
+            }
+        ],
+        "5": [{
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ora de baza"
+            },
+            {
+                "name": "Ed. plastic"
+            },
+            {
+                "name": "Ed. societate"
+            }
+        ]
     }
 }
