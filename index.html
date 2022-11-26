@@ -181,7 +181,43 @@
                 </div> -->
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#notesModal"
+                    data-bs-whatever="@mdo">Adauga notes</button>
+                <div class="modal fade" id="notesModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true" style="color:black">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Notita noua</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="note-name" class="col-form-label">Tema:</label>
+                                        <input type="text" class="form-control" id="note-name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Textul:</label>
+                                        <textarea class="form-control" id="message-text" required></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
+                                <button type="submit" class="btn btn-primary" id="add-note">Salvare</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center w-100 pt-3" id="todo-list">
 
+        </div>
         <div class="row">
             <div class="col mt-3">
                 <p style="font-size: 1rem;">Created by <a href="https://github.com/alexandragrosul">Alexandra Grosul</a>

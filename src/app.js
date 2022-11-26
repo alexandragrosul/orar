@@ -1,10 +1,28 @@
 import {
-    getCurrentTime,
-    isWeekends
-} from "./modules/functions.js";
-import {
-    lessonsTime
+    lessonsTime,
+    list,
+    dayToDisplay,
+    luniButton,
+    martiButton,
+    miercuriButton,
+    joiButton,
+    vineriButton,
+    selectClas,
+    addNoteButton,
+    inputNoteName,
+    inputNoteText,
+    daysToVacation,
+    themeSwitch,
+    notesList
 } from "./modules/constants.js"
+import {
+    getCurrentTime,
+    isWeekends,
+    notesFromLocalStorage,
+    buildNotes,
+    deleteNote
+} from "./modules/functions.js";
+
 
 
 if ('serviceWorker' in navigator) {
@@ -14,16 +32,6 @@ if ('serviceWorker' in navigator) {
 
 const currentDate = new Date();
 const currentDay = currentDate.getDay();
-
-const list = document.getElementById('orar_list')
-const dayToDisplay = document.getElementById('day')
-const luniButton = document.getElementById('luni')
-const martiButton = document.getElementById('marti')
-const miercuriButton = document.getElementById('miercuri')
-const joiButton = document.getElementById('joi')
-const vineriButton = document.getElementById('vineri')
-
-const selectClas = document.getElementById('clas-selection')
 let orar = null
 const classSelected = localStorage.getItem('clasa') ? localStorage.getItem('clasa') : "VI A"
 
@@ -138,10 +146,8 @@ selectClas.addEventListener('change', function () {
 
 const today = new Date()
 const autumnHolidays = new Date(2022, 11, 24)
-const daysToVacation = document.querySelector('#daysToVacation')
 daysToVacation.innerText = Math.floor((autumnHolidays.getTime() - today.getTime()) / (1000 * 3600 * 24))
 
-const themeSwitch = document.getElementById("themeSwitch");
 let isDarkTheme = false
 
 if (localStorage.getItem('isDark') === null) {
@@ -176,6 +182,25 @@ themeSwitch.addEventListener("click", function () {
     }
 })
 
+let notes = notesFromLocalStorage();
 
 
+addNoteButton.addEventListener('click', () => {
+    if (inputNoteName.value !== '' && inputNoteText !== '') {
+        localStorage.setItem('notes', JSON.stringify(notesFromLocalStorage().concat([{
+            id: new Date().getTime(),
+            name: inputNoteName.value,
+            text: inputNoteText.value
+        }])))
+        notes = notesFromLocalStorage();
+        buildNotes(notesList, notes)
+        var myModalEl = document.getElementById('notesModal');
+        var modal = bootstrap.Modal.getInstance(myModalEl)
+        modal.hide()
+    }
+
+    inputNoteName.value = ''
+    inputNoteText.value = ''
+})
+buildNotes(notesList, notes)
 // setInterval(() => console.log(getCurrentTime()), 60000)

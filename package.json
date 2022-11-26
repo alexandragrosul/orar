@@ -20,5 +20,8 @@
   "homepage": "https://github.com/alexandragrosul/orar#readme",
   "devDependencies": {
     "jsdoc": "^3.6.11"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
   }
 }
