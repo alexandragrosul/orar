@@ -42,3 +42,4 @@ export const inputNoteText = document.getElementById("message-text")
 export const daysToVacation = document.querySelector('#daysToVacation')
 export const themeSwitch = document.getElementById("themeSwitch");
 export const notesList = document.getElementById("todo-list")
+export const logo = document.getElementById("logo")

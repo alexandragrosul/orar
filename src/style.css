@@ -1,8 +1,16 @@
 body {
     font-size: 20px;
     font-family: 'Comfortaa', cursive;
-    background-color: #E8F9FD;
+    background-color: white;
 }
+
+#logo img {
+    height: 50px;
+}
+
+body.light-theme a {
+    color: white;
+  }
 
 
 .top-header {
@@ -13,7 +21,7 @@ body {
 } */
 
 body.dark-theme {
-    color: aliceblue ;
+    color: white ;
     background-color: #495057 ;
   }
 

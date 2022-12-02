@@ -13,7 +13,8 @@ import {
     inputNoteText,
     daysToVacation,
     themeSwitch,
-    notesList
+    notesList,
+    logo
 } from "./modules/constants.js"
 import {
     getCurrentTime,
@@ -162,9 +163,10 @@ if (isDarkTheme) {
     themeSwitch.classList.remove('btn-dark', 'btn-light')
     if (isDarkTheme) {
         themeSwitch.classList.add('btn-light')
+        logo.innerHTML = '<img src="logo/logo_dark.png" alt="logo">'
     } else {
         themeSwitch.classList.add('btn-dark')
-
+        logo.innerHTML = '<img src="logo/logo_light.png" alt="logo">'
     }
 }
 
@@ -176,9 +178,10 @@ themeSwitch.addEventListener("click", function () {
     themeSwitch.classList.remove('btn-dark', 'btn-light')
     if (isDarkTheme) {
         themeSwitch.classList.add('btn-light')
+        logo.innerHTML = '<img src="logo/logo_dark.png" alt="logo">'
     } else {
         themeSwitch.classList.add('btn-dark')
-
+        logo.innerHTML = '<img src="logo/logo_light.png" alt="logo">'
     }
 })
 
