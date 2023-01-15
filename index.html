@@ -22,42 +22,34 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
 
-        <div class="container-fluid top-header" style="max-width: 400px;">
+        <div class="container top-header d-flex justify-center" style="margin: 0 auto">
             <div id="logo">
                 <img src="logo/logo_light.png" alt="" id="logo_light">
             </div>
             <div><button id="themeSwitch" type="button" class="btn btn-dark">Dark</button></div>
 
 
-            <div>
-                <select id="clas-selection" class="form-select mb-2" aria-label="Selectati clasa">
-                    <option value="I A">a I "A"</option>
-                    <option value="I B">a I "B"</option>
-                    <option value="II A">a II "A"</option>
-                    <option value="II B">a II "B"</option>
-                    <option value="III A">a III "A"</option>
-                    <option value="III B">a III "B"</option>
-                    <option value="IV A">a IV "A"</option>
-                    <option value="IV B">a IV "B"</option>
-                    <option value="V A">a V "A"</option>
-                    <option value="V B">a V "B"</option>
-                    <option value="VI A">a VI "A"</option>
-                </select>
-            </div>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> -->
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Scoli</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Exstrascolare</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Repetitori</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Dropdown
@@ -73,21 +65,44 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled">Disabled</a>
-                    </li>
+                    </li> -->
                 </ul>
-                <form class="d-flex" role="search">
+                <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form> -->
+                <div>
+                    <select id="school-selection" class="form-select mb-2" aria-label="Selectati scoala">
+                        <option value="waldorf">Waldorf</option>
+
+                    </select>
+                </div>
+                <div>
+                    <select id="clas-selection" class="form-select mb-2" aria-label="Selectati clasa">
+                        <option value="I A">a I "A"</option>
+                        <option value="I B">a I "B"</option>
+                        <option value="II A">a II "A"</option>
+                        <option value="II B">a II "B"</option>
+                        <option value="III A">a III "A"</option>
+                        <option value="III B">a III "B"</option>
+                        <option value="IV A">a IV "A"</option>
+                        <option value="IV B">a IV "B"</option>
+                        <option value="V A">a V "A"</option>
+                        <option value="V B">a V "B"</option>
+                        <option value="VI A">a VI "A"</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
     <div class="app container">
         <div class="row mt-2">
 
+            <div class="col-12 text-center" id="orar-header">
 
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
+            </div>
+            <ul class="nav nav-tabs" id="days">
+                <!-- <li class="nav-item">
                     <a id="luni" class="nav-link " aria-current="page" href="#">Ln</a>
                 </li>
                 <li class="nav-item">
@@ -101,11 +116,17 @@
                 </li>
                 <li class="nav-item">
                     <a id="vineri" class="nav-link " href="#">Vi</a>
-                </li>
+                </li> -->
             </ul>
 
             <hr>
             <!-- <h2 id="day"></h2> -->
+            <div>
+                <div class="row" id="schools">
+
+
+                </div>
+            </div>
             <div class="orar">
                 <div class="col-12">
                     <ol id="orar_list" class="list-group list-group-numbered">
@@ -113,6 +134,26 @@
                     </ol>
                 </div>
 
+            </div>
+            <div class="repetitor mt-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Repetitori online</h2>
+                    </div>
+                    <div class="col-12">
+                        <select id="predmet-selection" class="form-select mb-2" aria-label="Selectati clasa">
+                            <option value="I A">Matematica</option>
+                            <option value="I B">Fizica</option>
+                            <option value="II A">informatica</option>
+                            <option value="II A">L Engleza</option>
+
+
+                        </select>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-success btn btn-success">Cautare repetitorul</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row w-100">
@@ -183,7 +224,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <button type="button" class="btn btn-primary btn btn-success" data-bs-toggle="modal"
+                <button type="button" class="btn btn-success btn btn-success" data-bs-toggle="modal"
                     data-bs-target="#notesModal" data-bs-whatever="@mdo">Adauga notes</button>
                 <div class="modal fade" id="notesModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true" style="color:black">
@@ -208,7 +249,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Inchide</button>
-                                <button type="submit" class="btn btn-primary btn btn-success"
+                                <button type="submit" class="btn btn-success btn btn-success"
                                     id="add-note">Salvare</button>
                             </div>
                         </div>

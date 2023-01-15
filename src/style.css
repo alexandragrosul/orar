@@ -4,6 +4,11 @@ body {
     background-color: white;
 }
 
+nav{ 
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 #logo img {
     height: 50px;
 }
@@ -12,6 +17,7 @@ body.light-theme a {
     color: white;
   }
 
+  
 
 .top-header {
     align-items: flex-start!important;
@@ -29,7 +35,9 @@ body.dark-theme {
     color: #adb5bd;
   }
 
-
+  .card-body {
+    color: black !important;
+  }
 
 nav.dark-theme {
     background-color: red!important;

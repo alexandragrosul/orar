@@ -845,5 +845,15 @@
                 "name": "Ed. societate"
             }
         ]
+    },
+    "info" : {
+        "logo" : "",
+        "name" : "Liceul Teoretic Waldorf",
+        "description": "Valorile pe care le promovează LT Waldorf: Educaţia pentru libertate şi pentru responsabilitate socială; Cultivarea binelui, frumosului şi adevărului pe baza credinţei, artei şi ştiintăţei.",
+        "adress" : "Str. Studenților 11, Chișinău",
+        "email" : "ltwaldorfmd@gmail.com",
+        "phone" : "022 323 155",
+        "location" : "47.06096571607125, 28.874130730118683",
+        "language" : "Română"
     }
 }

@@ -1,5 +1,6 @@
 import {
-    notesList
+    notesList,
+    lessonsTime,
 } from "./constants.js"
 export const getDay = (day) => {
     switch (day) {
@@ -48,7 +49,6 @@ export function deleteNote(id) {
         return todo.id != id
     })
     buildNotes(notesList, result)
-    console.log(result);
     localStorage.setItem('notes', JSON.stringify(result))
 }
 
@@ -74,4 +74,95 @@ export function buildNotes(htmlElement, notes) {
         deleteNote(e.path[0].dataset.id)
     })
 
+}
+
+export function daysTabs() {
+
+    const luniButton = document.getElementById('luni')
+    const martiButton = document.getElementById('marti')
+    const miercuriButton = document.getElementById('miercuri')
+    const joiButton = document.getElementById('joi')
+    const vineriButton = document.getElementById('vineri')
+    const orar = JSON.parse(localStorage.getItem('orar'))
+
+    const removeActiveTab = () => {
+        luniButton.classList.remove('active')
+        martiButton.classList.remove('active')
+        miercuriButton.classList.remove('active')
+        joiButton.classList.remove('active')
+        vineriButton.classList.remove('active')
+    }
+
+    luniButton.addEventListener('click', () => {
+        removeActiveTab()
+
+        luniButton.classList.add('active')
+
+        buildOrar(1, false, orar, lessonsTime)
+    })
+    martiButton.addEventListener('click', () => {
+        removeActiveTab()
+        martiButton.classList.add('active')
+        buildOrar(2, false, orar, lessonsTime)
+    })
+    miercuriButton.addEventListener('click', () => {
+        removeActiveTab()
+
+        miercuriButton.classList.add('active')
+        buildOrar(3, false, orar, lessonsTime)
+    })
+    joiButton.addEventListener('click', () => {
+        removeActiveTab()
+
+        joiButton.classList.add('active')
+        buildOrar(4, false, orar, lessonsTime)
+    })
+    vineriButton.addEventListener('click', () => {
+        removeActiveTab()
+
+        vineriButton.classList.add('active')
+        buildOrar(5, false, orar, lessonsTime)
+    })
+}
+
+export function buildOrar(day, isWeekend, orar, lessonsTime) {
+    const list = document.getElementById('orar_list')
+
+    list.innerHTML = ''
+    if (isWeekend) {
+        document.getElementById('luni').classList.add('active')
+        for (let i = 0; i < orar[1].length; i++) {
+            const newLi = document.createElement('li')
+            newLi.classList.add('list-group-item')
+            newLi.innerHTML = `<div style="margin-left: 1rem">${orar[1][i].name} </div> <div style="margin-left: auto; font-size: 16px">${lessonsTime[i].start} - ${lessonsTime[i].end} </div>`
+            list.appendChild(newLi)
+
+        }
+    } else {
+        switch (day) {
+            case 1:
+                document.getElementById('luni').classList.add('active')
+                break
+            case 2:
+                document.getElementById('marti').classList.add('active')
+                break
+            case 3:
+                document.getElementById('miercuri').classList.add('active')
+                break
+            case 4:
+                document.getElementById('joi').classList.add('active')
+                break
+            case 5:
+                document.getElementById('vineri').classList.add('active')
+                break
+
+
+        }
+        for (let i = 0; i < orar[day].length; i++) {
+            const newLi = document.createElement('li')
+            newLi.classList.add('list-group-item')
+            newLi.innerHTML = `<div style="margin-left: 1rem">${orar[day][i].name} </div> <div style="margin-left: auto; font-size: 16px">${lessonsTime[i].start} - ${lessonsTime[i].end} </div>`
+            list.appendChild(newLi)
+        }
+    }
 }
